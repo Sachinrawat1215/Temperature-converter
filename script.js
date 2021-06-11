@@ -7,9 +7,8 @@ cel.addEventListener("input", function(){
     let celsius = this.value;
     let fahrenheit = (celsius * 9 / 5) + 32;
 
-    function header(){
-        
-    }
+    document.querySelector('#celsius_header').style.visibility = "visible";
+    document.querySelector('#fahrenheit_header').style.visibility = "visible";
     
     if(!Number.isInteger(fahrenheit)){
         fahrenheit = fahrenheit.toFixed(4);
@@ -27,6 +26,9 @@ cel.addEventListener("input", function(){
 fah.addEventListener("input", function(){
     let fahrenheit = this.value;
     let celsius = (fahrenheit - 32) * 5 / 9;
+
+    document.querySelector('#celsius_header').style.visibility = "visible";
+    document.querySelector('#fahrenheit_header').style.visibility = "visible";
     
     if(!Number.isInteger(celsius)){
         celsius = celsius.toFixed(4);
